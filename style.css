@@ -80,6 +80,20 @@ ul li {
     position: relative;
 }
 
+/*
+What are Pseudo-Elements?
+Pseudo-elements create virtual elements that don’t actually exist in the HTML, but can be styled as if they do.
+They always start with double colons (::).
+
+What are Pseudo-Classes in CSS?
+A pseudo-class is used to style an element based on its state or behavior — like when you hover over it, or when it's the first child of its parent.
+Think of pseudo-classes as saying:
+"Style this element when something specific happens or if it meets a certain condition."
+Pseudo-Class	What It Does
+:hover      	Applies styles when the user hovers over an element
+
+*/
+
 ul li::before {
     content:'';
     position:absolute;
@@ -101,6 +115,16 @@ ul li.checked {
 ul li.checked::before {
     background-image: url(images/circle.png);
 }
+
+/*
++---------------------+
+|     ×              |  ← line-height controls this space
++---------------------+
+If the text height is small (say 16px), but line-height is 40px, it adds space above and below the text to center it in the box.
+✅ Summary:
+line-height: 40px makes the text sit vertically centered in a 40px-high container.
+It's especially useful when creating circular buttons or icons, like your ❌ delete button.
+*/
 
 ul li span {
     position: absolute;
